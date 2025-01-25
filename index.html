@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>誰是臥底</title>
+</head>
+
+<body>
+  <h1>誰是臥底</h1>
+  <p>請輸入九碼數字編碼來開始遊戲</p>
+  <p>X（亂數1~9）X（偶數：無白板、奇數：有白板）XX（遊戲人數03~20）XXX（題目編號000~080）XX（玩家編號）</p>
+
+  <input type="text" id="gameCode" placeholder="輸入九碼數字編碼" maxlength="9">
+  <button id="startGame">開始遊戲</button>
+
+  <div class="result hidden" id="gameResult">
+    <h2>遊戲開始！</h2>
+    <p>玩家人數：<span id="playerCount"></span></p>
+    <p>詞組：<span id="playerWord"></p>
+    <button id="voteUndercover">票選臥底</button>
+  </div>
+
+  <div class="vote-section hidden" id="voteSection">
+    <h3>請輸入玩家編號來進行票選</h3>
+    <input type="number" id="playerVote" placeholder="輸入玩家編號">
+    <button id="confirmVote">確認身分</button>
+  </div>
+
+  <div class="identity-section hidden" id="identitySection">
+    <h3>公布結果</h3>
+    <p id="playerIdentity"></p>
+  </div>
+</body>
+
+<script src="main.js"></script>
+<script src="database.js"></script>
+
+</html>
