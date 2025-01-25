@@ -51,7 +51,7 @@ startGameButton.addEventListener('click', () => {
   const whiteboardPlayers = [];
 
   for (let i = 0; i < totalUndercoverCount; i++) {
-    let baseValue = Math.pow(Math.cbrt(y / 11 * 7) / 19, 3) + i*3; // 根據公式計算基礎值，並加上 i 作偏移
+    let baseValue = Math.pow(Math.sqrt(y / 11 * 7), 3) + i*3; // 根據公式計算基礎值，並加上 i 作偏移
     let playerIndex = Math.floor(baseValue) % playerCount + 1; // 計算玩家編號，確保在 1 ~ playerCount 範圍內
 
     // 確保玩家編號不重複
